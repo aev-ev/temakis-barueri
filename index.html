@@ -7,6 +7,10 @@
     <title>Temakis Barueri</title>
     <link rel="canonical" href="https://temakisbarueri.com.br/">
     <link rel="shortlink" href="https://temakisbarueri.com.br/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1696ca4aa5.js" crossorigin="anonymous"></script>
     <style>
         body {
             margin: 0;
@@ -17,7 +21,7 @@
 
         .main {
             height: 100vh;
-            background: url(./LP.webp) no-repeat;
+            background: url('https://temakisbarueri.com.br/assets/lp.webp') no-repeat;
             background-size: contain;
             background-position: center;
         }
@@ -30,22 +34,67 @@
             justify-content: center;
             width: 100%;
         }
-
-        .infos {
-            display: block;
-            color: white;
-            font-family: Helvetica;
-            font-size: 16px;
-            font-weight: 600;
+        
+        .list-items {
             padding: 0;
-            margin: auto;
-            line-height: 1.5;
-            text-align: center;
-            text-transform: uppercase;
-            align-content: center;
+            justify-content: center;
+            margin: 0 -8px 0 -8px;
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            box-sizing: border-box;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        .list-items:nth-child(1) {
+            margin-bottom: 5px;
+        }
+
+        .list-item {
+            margin-right: 8px;
+            margin-left: 8px;
+            word-break: break-word;
+            justify-content: center;
+            display: flex;
             align-items: center;
+            font-size: inherit;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+            border: 0;
+            outline: 0;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        .list-item-icon {
+            --icon-margin: 0 calc(19px*0.125);
+            --icon-size: 19px;
+            text-align: center;
+            display: flex;
+            box-sizing: border-box;
+            color: #CE231A;
+            transition: fill 0.3s;
+            margin: var(--icon-margin,0 calc(var(--icon-size, 1em) * .25) 0 0);
+            width: var(--icon-size,1em);
+            height: var(--icon-size,1em);
+        }
+
+        .list-item-text {
+            color: #fff;
+            transition: color 0.3s;
             align-self: center;
-            width: 70%;
+            padding-left: 5px;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.2em;
+            margin-right: 10px;
         }
 
         @media (max-width: 767px) {
@@ -53,14 +102,9 @@
                 background-size: cover;
             }
 
-            .infos {
-                font-size: 12px;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1022px) {
-            .infos {
-                font-size: 14px;
+            .list-item-icon > .list-item-text {
+                font-size: 16px;
+                line-height: 1.2em;
             }
         }
     </style>
@@ -69,12 +113,31 @@
     <div class="main"></div>
     <div class="footer">
         <div class="inner">
-            <h2 class="infos">
-                A empresa <b>Temakis Barueri</b> que tem como razão social
-                Daniel Rozendo Da Silva foi fundada em 15/10/2020 e está
-                cadastrada na Solutudo no segmento de Restaurantes com o
-                CNPJ 39.433.758/0001-59.
-            </h2>
+            <ul class="list-items">
+                <li class="list-item">
+                    <span class="list-item-icon"><i class="fa-solid fa-torii-gate"></i></span>
+                    <span class="list-item-text">RAZÃO SOCIAL: DANIEL ROZENDO DA SILVA</span>
+                </li>
+                <li class="list-item">
+                    <span class="list-item-icon"><i class="fa-solid fa-torii-gate"></i></span>
+                    <span class="list-item-text">CNPJ: 39.433.758/0001-59</span>
+                </li>
+                <li class="list-item"><span class="list-text-spacer"></span></li>
+                <li class="list-item">
+                    <span class="list-item-icon"><i class="fa-solid fa-torii-gate"></i></span>
+                    <span class="list-item-text">BARUERI - SP</span>
+                </li>
+            </ul>
+            <ul class="list-items">
+                <li class="list-item">
+                    <span class="list-item-icon"><i class="fa-solid fa-torii-gate"></i></span>
+                    <span class="list-item-text">CEP: 06433-000</span>
+                </li>
+                <li class="list-item">
+                    <span class="list-item-icon"><i class="fa-solid fa-torii-gate"></i></span>
+                    <span class="list-item-text">(16) 99344-9131</span>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
